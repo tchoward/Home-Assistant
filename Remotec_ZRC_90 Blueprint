@@ -2,13 +2,13 @@ blueprint:
   name: Remotec ZRC-90
   description: Automate your Remotec ZRC-90 8-button Remote
   domain: automation
-  source_url: https://community.home-assistant.io/t/z2m-diyruz-freepad-letv-8-button-remote/296509
+  source_url: https://raw.githubusercontent.com/tchoward/Home-Assistant/main/Remotec_ZRC_90%20Blueprint?token=APM7ODE5CFYI3TTJL3VVMT3A2CVYG
   input:
     remote:
-      name: FreePad LeTV 8 Remote Action
+      name: Remotec ZRC-90
       selector:
         entity:
-          integration: mqtt
+          integration: hubitat
           domain: sensor
     button_4_single:
       name: Button Up (single press)
