@@ -9,7 +9,6 @@ blueprint:
       selector:
         device:
           integration: hubitat
-          domain: sensor
     button_4_single:
       name: Button Up (single press)
       default: []
