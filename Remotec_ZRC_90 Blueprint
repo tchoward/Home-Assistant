@@ -1,4 +1,4 @@
-blueprint:
+cblueprint:
   name: Remotec ZRC-90
   description: Automate your Remotec ZRC-90 8-button Remote
   domain: automation
@@ -7,7 +7,7 @@ blueprint:
     remote:
       name: Remotec ZRC-90
       selector:
-        entity:
+        device:
           integration: hubitat
           domain: sensor
     button_4_single:
