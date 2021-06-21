@@ -9,7 +9,7 @@ blueprint:
       selector:
         entity:
           integration: hubitat
-          domain: button
+          domain: remote
     button_4_single:
       name: Button Up (single press)
       default: []
