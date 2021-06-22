@@ -36,7 +36,9 @@ blueprint:
         action: {}
     
 mode: restart
+
 max_exceeded: silent
+
 trigger:
 - platform: state
   entity_id: !input 'remote'
