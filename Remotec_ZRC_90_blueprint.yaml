@@ -36,13 +36,13 @@ blueprint:
         action: {}
     
 mode: restart
-
 max_exceeded: silent
 
 trigger:
 - platform: state
   entity_id: !input 'remote'
   from: ""
+
 condition:
 - condition: template
   value_template: "{{ 'button' in trigger.to_state.state }}"
