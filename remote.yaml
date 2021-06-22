@@ -1,0 +1,147 @@
+alias: Larisa's Remote
+description: ''
+use_blueprint:
+  path: tchoward/Remotec_ZRC_90 Blueprint.yaml
+  input:
+    remote: 136e52ab516acb16cb5df4edf4d4ed4c
+    button_1_single:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '100'
+    button_1_double:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '100'
+    button_1_hold:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '100'
+    button_2_single:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '50'
+    button_2_double:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '50'
+    button_2_hold:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '50'
+    button_3_single:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '25'
+    button_3_double:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '25'
+    button_3_hold:
+      - service: fan.set_speed
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+        data:
+          speed: '25'
+    button_4_single:
+      - service: fan.turn_off
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+    button_4_double:
+      - service: fan.turn_off
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+    button_4_hold:
+      - service: fan.turn_off
+        target:
+          device_id: 5d853fed5dff2ce2bcdca6ca63c7fffc
+    button_5_single:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 255
+    button_5_double:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 255
+    button_5_hold:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 255
+    button_6_single:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 125
+    button_6_double:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 125
+    button_6_hold:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 255
+    button_7_single:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 25
+    button_7_double:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 25
+    button_7_hold:
+      - service: light.turn_on
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+        data:
+          kelvin: 2700
+          brightness: 25
+    button_8_single:
+      - service: light.turn_off
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+    button_8_double:
+      - service: light.turn_off
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
+    button_8_hold:
+      - service: light.turn_off
+        target:
+          device_id: 951e5f511a76f0fd04e207241a69a39a
