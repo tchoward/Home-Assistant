@@ -1,4 +1,4 @@
-blueprint:
+blueprint: 
   name: Remotec ZRC90
   description: Automate your Remotec ZRC90 8 button Remote
   domain: automation
