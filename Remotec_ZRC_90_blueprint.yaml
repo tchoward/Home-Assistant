@@ -1,55 +1,35 @@
-blueprint: 
-  name: Remotec ZRC90
-  description: Automate your Remotec ZRC90 8 button Remote
+blueprint:
+  name: Remotec ZRC-90 Scene Master
+  description: Create an automation for the Remotec ZRC-90 8 button remote using ZWAVE-JS integration
   domain: automation
-  source_url: https://raw.githubusercontent.com/tchoward/Home-Assistant/main/Remotec_ZRC_90_blueprint.yaml
   input:
-    remote:
+    remotec_zrc90:
       name: Remotec ZRC-90
+      description: The Remotec ZRC-90 to interact with.
       selector:
         device:
           model: Remotec ZRC-90
-          integration: hubitat     
-    button_1_single:
-      name: Button 1 (single press)
+    button_1_1:
+      name: Press Button One 1x
+      description: Action to run on button press once.
       default: []
       selector:
         action: {}
-    button_1_double:
-      name: Button 1 (double press)
-      default: []
-      selector:
-        action: {}
-    button_1_hold:
-      name: Button 1 (long press)
-      default: []
-      selector:
-        action: {}
-        
-mode: restart
+mode: single
+
 max_exceeded: silent
 
 trigger:
-- platform: state
-  device_id: !input 'remote'
-  from: ""
-
-condition:
-- condition: template
-  value_template: "{{ 'button' in trigger.to_state.state }}"
-
+  platform: event
+  event_type: zwave_js_value_notification
+  event_data:
+    command_class_name: Central Scene
+    device_id: !input remotec_zrc90
 action:
-- variables:
-    command: '{{ trigger.to_state.attributes.action }}'
-- choose:
-  - conditions:
-    - '{{ command == "button_1_single" }}'
-    sequence: !input 'button_1_single'
-  - conditions:
-    - '{{ command == "button_1_double" }}'
-    sequence: !input 'button_1_double'
-  - conditions:
-    - '{{ command == "button_1_hold" }}'
-    sequence: !input 'button_1_hold'
-   
-  
+  - variables:
+      scene_id: "{{ trigger.event.data.property_key_name }}"
+      scene_value_id: "{{ trigger.event.data.value }}"
+
+  - choose:
+      - conditions: "{{ scene_id == '001' and scene_value_id == 'KeyPressed' }}"
+        sequence: !input button_1_1
