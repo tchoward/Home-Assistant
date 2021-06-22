@@ -2,7 +2,7 @@ blueprint:
   name: Remotec ZRC90
   description: Automate your Remotec ZRC90 8 button Remote
   domain: automation
-  source_url: https://raw.githubusercontent.com/tchoward/Home-Assistant/main/Remotec_ZRC_90_Blueprint.yaml
+  source_url: https://raw.githubusercontent.com/tchoward/Home-Assistant/main/Remotec_ZRC_90_blueprint.yaml
   input:
     remote:
       name: Remotec ZRC-90
