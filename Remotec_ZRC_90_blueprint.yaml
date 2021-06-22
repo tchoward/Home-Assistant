@@ -9,6 +9,7 @@ blueprint:
       selector:
         device:
           integration: hubitat
+          
     button_1_single:
       name: Button 1 (single press)
       default: []
@@ -24,8 +25,110 @@ blueprint:
       default: []
       selector:
         action: {}
+        
     button_2_single:
       name: Button 2 (single press)
+      default: []
+      selector:
+        action: {}
+    button_2_double:
+      name: Button 2 (double press)
+      default: []
+      selector:
+        action: {}
+    button_2_hold:
+      name: Button 2 (long press)
+      default: []
+      selector:
+        action: {}
+        
+    button_3_single:
+      name: Button 3 (single press)
+      default: []
+      selector:
+        action: {}
+    button_3_double:
+      name: Button 3 (double press)
+      default: []
+      selector:
+        action: {}
+    button_3_hold:
+      name: Button 3 (long press)
+      default: []
+      selector:
+        action: {}  
+        
+    button_4_single:
+      name: Button 4 (single press)
+      default: []
+      selector:
+        action: {}
+    button_4_double:
+      name: Button 4 (double press)
+      default: []
+      selector:
+        action: {}
+    button_4_hold:
+      name: Button 4 (long press)
+      default: []
+      selector:
+        action: {}  
+        
+    button_5_single:
+      name: Button 5 (single press)
+      default: []
+      selector:
+        action: {}
+    button_5_double:
+      name: Button 5 (double press)
+      default: []
+      selector:
+        action: {}
+    button_5_hold:
+      name: Button 5 (long press)
+      default: []
+      selector:
+        action: {}
+        
+    button_6_single:
+      name: Button 6 (single press)
+      default: []
+      selector:
+        action: {}
+    button_6_double:
+      name: Button 6 (double press)
+      default: []
+      selector:
+        action: {}
+    button_6_hold:
+      name: Button 6 (long press)
+      default: []
+      selector:
+        action: {}
+        
+    button_7_single:
+      name: Button 7 (single press)
+      default: []
+      selector:
+        action: {}
+    button_7_double:
+      name: Button 7 (double press)
+      default: []
+      selector:
+        action: {}
+    button_7_hold:
+      name: Button 7 (long press)
+      default: []
+      selector:
+        action: {}  
+        
+    button_8_single:
+      name: Button 8 (single press)
+      default: []
+      selector:
+        action: {}
+    button_8_double:
+      name: Button 8 (double press)
       default: []
       selector:
         action: {}
@@ -33,8 +136,8 @@ blueprint:
       name: Button 8 (long press)
       default: []
       selector:
-        action: {}
-    
+        action: {}  
+        
 mode: restart
 max_exceeded: silent
 
