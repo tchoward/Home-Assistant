@@ -14,7 +14,7 @@ blueprint:
       default: []
       selector:
         action: {}
-    button_2_double:
+    button_1_double:
       name: Button 1 (double press)
       default: []
       selector:
