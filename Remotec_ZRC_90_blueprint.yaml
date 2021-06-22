@@ -179,3 +179,4 @@ action:
           state: button_8_release
           attribute: action
         sequence: !input 'button_8_hold'
+        
