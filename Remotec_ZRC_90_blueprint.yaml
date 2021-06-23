@@ -21,9 +21,10 @@ mode: single
 max_exceeded: silent
 
 trigger:
-  platform: device
-  domain: hubitat
-  device_id: !input remotec_zrc90
+  - platform: event
+    event_type: hubitat.event
+    event_data:
+      device_id: !input remotec_zrc90
   
   
 
