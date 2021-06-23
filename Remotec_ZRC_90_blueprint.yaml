@@ -15,16 +15,17 @@ blueprint:
       default: []
       selector:
         action: {}
+
 mode: single
 
 max_exceeded: silent
 
 trigger:
   platform: event
-  event_type: zwave_js_value_notification
+  event_type: hubitat_event
   event_data:
-    command_class_name: Central Scene
-    device_id: !input remotec_zrc90
+      device_id: !input remotec_zrc90
+
 action:
   - variables:
       scene_id: "{{ trigger.event.data.property_key_name }}"
