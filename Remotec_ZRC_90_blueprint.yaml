@@ -23,7 +23,7 @@ max_exceeded: silent
 trigger:
   - platform: event
     event_type: hubitat_event
-    event_data:
+    data:
       device_id: !input remotec_zrc90
   
   
