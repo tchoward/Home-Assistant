@@ -1,0 +1,52 @@
+blueprint:
+  name: GE Enbrighten Double Tap
+  description: Create an automation for GE Enbrighten Z-Wave Smart Switch
+  domain: automation
+
+  input:
+    zooz:
+      name: enbrighten 
+      description: The GE Enbrighten Z-Wave Smart Switch to interact with.
+      selector:
+        device:
+          model: GE Enbrighten Z-Wave Smart Switch
+    button_1:
+      name: Double Tap Up
+      description: Action to run double tap up
+      selector:
+        action: {}
+    button_2:
+      name: Double Tap Down
+      description: Action to run double Tap Dowm
+      default: []
+      selector:
+        action: {}
+  source_url: https://raw.githubusercontent.com/tchoward/Home-Assistant/main/Remotec_ZRC_90_blueprint.yaml
+
+mode: queued
+max_exceeded: silent
+
+trigger:
+
+-  domain: hubitat
+   platform: device
+   type: doubleTapped
+   subtype: '1'
+   device_id: !input 'enbrighten'
+
+-  domain: hubitat
+   platform: device
+   type: doubleTapped
+   subtype: '2'
+   device_id: !input 'enbrighten'
+
+action:
+
+- variables:
+    event: '{{ trigger.event.data.value }}'
+    
+- choose:
+  - conditions: "{{ event == 1 }}"
+    sequence: !input 'button_1'
+  - conditions: "{{ event == 2 }}"
+    sequence: !input 'button_2'
