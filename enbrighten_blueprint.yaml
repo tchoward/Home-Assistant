@@ -4,7 +4,7 @@ blueprint:
   domain: automation
 
   input:
-    zooz:
+    enbrighten:
       name: enbrighten 
       description: The GE Enbrighten Z-Wave Smart Switch to interact with.
       selector:
